@@ -15,7 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-bad-practices/barrel-file": ["libs/barrel-file/src/index.ts"]
+      "@nx-bad-practices/barrel-file": ["libs/barrel-file/src/index.ts"],
+      "@nx-bad-practices/gtm": ["libs/gtm/src/index.ts"],
+      "@nx-bad-practices/ui-button-with-icon": [
+        "libs/ui-button-with-icon/src/index.ts"
+      ],
+      "@nx-bad-practices/util-capitalize": ["libs/util-capitalize/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
