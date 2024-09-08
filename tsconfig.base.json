@@ -15,7 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-bad-practices/barrel-file": ["libs/barrel-file/src/index.ts"]
+      "@nx-bad-practices/barrel-file": ["libs/barrel-file/src/index.ts"],
+      "@nx-bad-practices/barrel-file-helper": [
+        "libs/barrel-file/src/lib/barrel-file/barrel-file-helper/index.ts"
+      ],
+      "@nx-bad-practices/my-tiny-lib": ["libs/my-tiny-lib/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,5 +1,6 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BarrelFileHelperService } from '@nx-bad-practices/barrel-file-helper';
 
 @Component({
   selector: 'app-nx-welcome',
@@ -427,6 +428,8 @@ import { CommonModule } from '@angular/common';
         }
       }
     </style>
+    <button (click)="helper.helpMe()">Help!</button>
+
     <div class="wrapper">
       <div class="container">
         <!--  WELCOME  -->
@@ -870,4 +873,6 @@ nx g &#64;nx/angular:component ui/src/lib/button</pre>
   styles: [],
   encapsulation: ViewEncapsulation.None,
 })
-export class NxWelcomeComponent {}
+export class NxWelcomeComponent {
+  readonly helper = inject(BarrelFileHelperService);
+}
